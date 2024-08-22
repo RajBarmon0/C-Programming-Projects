@@ -1,7 +1,8 @@
 # C-Programming-Projects
 
 ## Projects 1
-## If an employee's salary is input through the keyboard write a program to find his gross salary as per the following company policy.
+
+ <h1>If an employee's salary is input through the keyboard write a program to find his gross salary as per the following company policy.</h1>
 
 1. If basic salary is less than Taka 25000, then House rent Allowance is 10% of basic salary and Dearness allowance is 70% of basic salary.
 
@@ -54,7 +55,7 @@ int main() {
 -------------------------------------------------------------------------------------------------------------------------------------
 ## Projects 2
 
-## Below is a simple C program that calculates the library fine based on the number of days a book is returned late. The program takes the number of late days as input and displays the appropriate fine or a message indicating membership cancellation if the book is returned after 30 days.
+<h1>Below is a simple C program that calculates the library fine based on the number of days a book is returned late. The program takes the number of late days as input and displays the appropriate fine or a message indicating membership cancellation if the book is returned after 30 days.</h1>
 
 
 
@@ -114,7 +115,8 @@ You can compile and run this program using a C compiler to test its functionalit
 -------------------------------------------------------------------------------------------------------------------------------------
 ## Projects 3
 
-## To determine if a triangle is valid based on its side lengths, you need to check if the sum of any two sides is greater than the third side. This is known as the triangle inequality theorem
+
+<h1>To determine if a triangle is valid based on its side lengths, you need to check if the sum of any two sides is greater than the third side. This is known as the triangle inequality theorem</h1>
 
 **Explanation:**
 1. Function isValidTriangle:
@@ -155,6 +157,56 @@ int main() {
         printf("The triangle with sides %d, %d, and %d is valid.\n", side1, side2, side3);
     } else {
         printf("The triangle with sides %d, %d, and %d is not valid.\n", side1, side2, side3);
+    }
+
+    return 0;
+}
+```
+
+## Projects 4
+
+**To implement the company's policy for processing customer orders, you need to consider three
+scenarios based on the quantity in stock and the customer's credit status. The C program below
+handles these scenarios:**
+
+1. If the customer's order can be fulfilled with the stock available and their credit is OK,
+process the full order.
+2. If the customer's credit is not OK, do not fulfill the order and send an intimation message.
+3. If the customer's credit is OK but the stock is insufficient to fulfill the entire order, supply
+what is in stock and send an intimation message about the balance.
+
+**Code:**
+```bash
+  #include <stdio.h>
+
+int main() {
+    int stock, order;
+    char creditStatus;
+
+    // Input the stock and order details
+    printf("Enter the quantity in stock: ");
+    scanf("%d", &stock);
+    
+    printf("Enter the quantity of the order: ");
+    scanf("%d", &order);
+    
+    // Input the credit status
+    printf("Is the customer's credit OK? (Y/N): ");
+    scanf(" %c", &creditStatus);  // Note the space before %c to consume any newline characters
+
+    // Process the order based on the rules
+    if (creditStatus == 'Y' || creditStatus == 'y') {
+        if (order <= stock) {
+            // Case 1: Order can be fully fulfilled
+            printf("Order processed successfully. Supply: %d\n", order);
+        } else {
+            // Case 3: Stock is less than order
+            printf("Order processed partially. Supply: %d\n", stock);
+            printf("Intimation: %d items will be shipped later.\n", order - stock);
+        }
+    } else {
+        // Case 2: Credit is not OK
+        printf("Order cannot be processed. Intimation: Credit status not OK.\n");
     }
 
     return 0;
