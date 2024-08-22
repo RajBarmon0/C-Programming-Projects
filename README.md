@@ -1,6 +1,6 @@
 # C-Programming-Projects
 
-1. If an employee's salary is input through the keyboard write a program to find his gross salary
+1.If an employee's salary is input through the keyboard write a program to find his gross salary
 as per the following company policy.
 
 a. If basic salary is less than Taka 25000, then House rent
