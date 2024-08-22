@@ -14,3 +14,5 @@ c. If basic salary is more than
 Taka 50000, then House rent Allowance is 20% of basic salary and Dearness allowance is 90%
 of basic salary. The gross salary is the sum of Basic salary, House rent Allowance and
 Dearness allowance
+
+code : Gross Salary.c
