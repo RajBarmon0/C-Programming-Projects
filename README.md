@@ -16,3 +16,26 @@ of basic salary. The gross salary is the sum of Basic salary, House rent Allowan
 Dearness allowance
 
 code : Gross Salary.c
+
+
+2. Below is a simple C program that calculates the library fine based on the number of days a book
+is returned late. The program takes the number of late days as input and displays the
+appropriate fine or a message indicating membership cancellation if the book is returned after
+30 days.
+Explanation:
+1. Input Reading:
+○ The program prompts the user to enter the number of days the book is late using
+scanf.
+
+2. Fine Calculation:
+○ The program uses a series of if-else statements to determine the fine based
+on the number of late days:
+■ 0 or less days: No fine, the book is returned on time.
+■ 1 to 5 days: Fine is 500 taka.
+■ 6 to 10 days: Fine is 1000 taka.
+■ 11 to 30 days: Fine is 1500 taka.
+■ More than 30 days: Membership is canceled.
+3. Output:
+○ The program prints the appropriate message based on the input days.
+You can compile and run this program using a C compiler to test its functionality.
+
